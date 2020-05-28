@@ -1,0 +1,3 @@
+rootProject.name='MyFilpBoard'
+include ':app'
+include ':fliplibrary'
