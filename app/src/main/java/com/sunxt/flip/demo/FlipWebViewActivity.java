@@ -85,10 +85,10 @@ public class FlipWebViewActivity extends Activity {
       this.activity = activity;
       this.controller = controller;
 
-      urls.add("http://www.github.com");
-      urls.add("http://www.amazon.com");
-      urls.add("http://www.yahoo.com");
-      urls.add("http://www.google.com");
+      urls.add("http://www.baidu.com");
+      urls.add("https://www.toutiao.com");
+      urls.add("http://www.sina.com");
+      urls.add("https://weixin.sogou.com/");
     }
 
     @Override

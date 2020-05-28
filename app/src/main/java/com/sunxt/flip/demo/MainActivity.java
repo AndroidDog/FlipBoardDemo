@@ -58,7 +58,7 @@ public class MainActivity extends ListActivity {
   public boolean onOptionsItemSelected(MenuItem item) {
     Intent intent = new Intent(
         Intent.ACTION_VIEW,
-        Uri.parse("http://openaphid.github.com/")
+        Uri.parse("http://www.baidu.com/")
     );
     startActivity(intent);
 
