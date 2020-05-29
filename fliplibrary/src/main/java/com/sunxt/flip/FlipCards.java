@@ -17,6 +17,7 @@ limitations under the License.
 
 package com.sunxt.flip;
 
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -231,6 +232,7 @@ public class FlipCards {
 
         float angle = getDisplayAngle();
         if (angle < 0) {
+//            AphidLog.i("com.sunxt.flip.FlipCards.draw, angle = " + angle);
             frontCards.getTopCard().setAxis(Card.AXIS_BOTTOM);
             frontCards.getTopCard().setAngle(-angle);
             frontCards.getTopCard().draw(gl);
@@ -240,6 +242,7 @@ public class FlipCards {
 
             //no need to draw backCards here
         } else {
+//            AphidLog.i("com.sunxt.flip.FlipCards.draw, angle = " + angle);
             if (angle < 90) { //render front view over back view
                 frontCards.getTopCard().setAngle(0);
                 frontCards.getTopCard().draw(gl);
@@ -264,9 +267,9 @@ public class FlipCards {
         }
 
         if ((frontCards.getView() == null || TextureUtils.isValidTexture(frontCards.getTexture())) &&
-                (backCards.getView() == null || TextureUtils.isValidTexture(backCards.getTexture()))
-        )
+                (backCards.getView() == null || TextureUtils.isValidTexture(backCards.getTexture()))) {
             firstDrawFinished = true;
+        }
     }
 
     public void invalidateTexture() {
