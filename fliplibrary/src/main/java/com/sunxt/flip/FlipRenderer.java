@@ -116,10 +116,11 @@ public class FlipRenderer implements GLSurfaceView.Renderer {
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        if (cards.isVisible() && cards.isFirstDrawFinished())
+        if (cards.isVisible() && cards.isFirstDrawFinished()) {
             gl.glClearColor(1f, 1f, 1f, 1f);
-        else
+        } else {
             gl.glClearColor(0f, 0f, 0f, 0f);
+        }
         gl.glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         synchronized (postDestroyTextures) {
